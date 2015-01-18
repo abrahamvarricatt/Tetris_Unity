@@ -7,7 +7,7 @@ public class ShapeSpawnerComponent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spwanPiece ();
+		StartCoroutine ("spwanPiece");
 	}
 	
 	// Update is called once per frame
@@ -16,9 +16,15 @@ public class ShapeSpawnerComponent : MonoBehaviour {
 	}
 
 	void spwanPiece(){
-		int select = Random.Range (0, 3);
+		new WaitForSeconds (2.0f);
+
+		int select = Random.Range (0, pieces.Length-1);
 
 		Debug.Log ("Spwaning piece : " + pieces [select].name);
 		Instantiate (pieces [select], transform.position, Quaternion.identity);
+	}
+
+	void pieceStoppedFalling(){
+		StartCoroutine ("spwanPiece");
 	}
 }
