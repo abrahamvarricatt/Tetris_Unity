@@ -5,8 +5,10 @@ public class ShapeSpawnerComponent : MonoBehaviour {
 
 	public GameObject[] pieces = new GameObject[5];
 
+
 	// Use this for initialization
 	void Start () {
+	  	ShapeComponent.maxDistance = (int)GameObject.Find ("Main Camera").GetComponent<Camera>().orthographicSize - 3;
 		StartCoroutine ("spwanPiece");
 	}
 	

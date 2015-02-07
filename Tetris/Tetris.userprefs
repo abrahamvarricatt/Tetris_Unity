@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ShapeSpawnerComponent.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ShapeComponent.cs">
     <Files>
-      <File FileName="Assets\ShapeComponent.cs" Line="8" Column="3" />
-      <File FileName="Assets\ShapeSpawnerComponent.cs" Line="21" Column="16" />
+      <File FileName="Assets\ShapeComponent.cs" Line="76" Column="5" />
+      <File FileName="Assets\ShapeSpawnerComponent.cs" Line="11" Column="114" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

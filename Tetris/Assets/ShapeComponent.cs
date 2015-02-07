@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ShapeComponent : MonoBehaviour {
 
+	public static int maxDistance = 1;
+
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating ("fallOneStep", 1.0f, 0.5f);
@@ -38,6 +40,16 @@ public class ShapeComponent : MonoBehaviour {
 					break;
 				}
 			}
+			
+			if( maxDistance * -1 > block.GetComponent<Transform>().position.x && isLeft ){
+				canSideStep = false;
+				break;
+			}
+
+			if( maxDistance < block.GetComponent<Transform>().position.x && !isLeft ){
+				canSideStep = false;
+				break;
+			}
 		}
 		
 		if (canSideStep) {
@@ -61,6 +73,11 @@ public class ShapeComponent : MonoBehaviour {
 					canbeRotated = false;
 					break;
 				}
+			}
+
+			if( maxDistance * -1 > block.GetComponent<Transform>().position.x || maxDistance < block.GetComponent<Transform>().position.x ){
+				canbeRotated = false;
+				break;
 			}
 		}
 
